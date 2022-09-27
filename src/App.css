@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+.calculator{
+    background-color: #fff;
+    height: auto;
+    padding: 2em;
+    margin: 0 20px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgb(35, 34, 34);
+}
+/*DISPLAY */
+#screen{
+    background-color: #3A4E48;
+    height: 150px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 2rem;
+    /* font-family: Digital; */
+    text-align: end;
+    font-family: 'Share Tech Mono', monospace;
+}
+#formula-display{
+    color: orange;
+    vertical-align: top;
+    height: 48px;
+    font-size: .8em;
+}
+#display{
+    color: white;
+    overflow-wrap: break-word;
+}
+
+/* BUTTONS */
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,60px);
+    gap: 10px;
+}
+#clear{
+    grid-column: 1/3;
+    cursor: auto;
+}
+#equals{
+    grid-column: 4/5;
+    grid-row: 4/6;
+    cursor: auto;
+}
+#zero{
+    grid-column: 1/3;
+    border-radius: 10px;
+    border-color: #3A4E48;
+    border-width: 3px;
+    cursor: auto;
+}
+.btn,#zero{
+    font-weight: bold;
+    font-size: 2rem
+}
+#zero:hover{
+    background-color: grey;
+    color: white
+}
+#seven:hover,#eight:hover,#nine:hover,#four:hover,#five:hover,#six:hover,#one:hover,#two:hover,#three:hover,#decimal:hover{
+        background-color: #3A4E48;
+    color: white;
+    border: none
+}
+#divide:hover,#multiply:hover,#add:hover,#subtract:hover{
+        border: 1px solid black
+}
+#divide,#multiply,#add,#subtract,#seven,#eight,#nine,#four,#five,#six,#one,#two,#three,#decimal{
+    cursor: auto;
+    border: 2px solid black
+}
+@media(max-width: 480px){
+    .calculator{
+        width: 350px;
+        padding: 1.5em;
+        /* margin: 20px; */
+    }
+    #buttons{
+    grid-template-rows: repeat(5,55px);
+    gap: 7px;
+}
+    .btn,#zero{
+    font-size: 1.5em
+}
+    #screen{
+    height: 5em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: .7em;
+    font-size: 1.5em;
+}
+    #formula-display{
+    height: 2.5em;
+    font-size: .7em;
+}
+}
