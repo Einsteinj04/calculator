@@ -58,7 +58,7 @@ export default function Buttons({btnFunctionalities}) {
       let match = prev.formula.replace(/(\d*)([\+\-\/\*]+)([\+\/\*])(\d*)/g,'$1$3$4');
       return {
         ...prev,
-        formula: prev.formula + e.target.value + eval(match),
+        formula: prev.formula + (e.target.value).replace(/(\w*\=\w*)(\=)/,'$1'/) + eval(match),
         output: eval(match),
       };
     })
